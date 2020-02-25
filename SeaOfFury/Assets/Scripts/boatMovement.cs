@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class boatMovement : MonoBehaviour
 {
-    public float constantSpeed = 0.05f;
-    public float backwardSpeed = 0.025f;
-    public float speed = 5.0f;
+    public float startSpeed = 0;
+    public float currentSpeed = 0;
+    public float maxSpeed = 0.08f;
+
+    public float acceleration = 0.02f;
+
+    public float deceleration = 0.01f;
     public Rigidbody shipRB;
 
     // Start is called before the first frame update
@@ -20,46 +24,45 @@ public class boatMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            Debug.Log("forward");
-            shipRB.velocity = (transform.forward * speed);
+            currentSpeed = currentSpeed + (acceleration * Time.deltaTime);
+        }
+        else
+        {
+            currentSpeed = currentSpeed - (deceleration * Time.deltaTime);
+        }
+        
+        if (currentSpeed > 0)
+        {
+            transform.Translate(0, 0, currentSpeed);
+        }
+        if (currentSpeed > maxSpeed){
+            currentSpeed = maxSpeed;
         }
 
-        if (Input.GetKey(KeyCode.S))
+        if (currentSpeed < 0)
         {
-            Debug.Log("Backward");
-            shipRB.velocity = (-transform.forward * speed);
+            currentSpeed = 0;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             Debug.Log("Right");
-            transform.Rotate(new Vector3(0, 2, 0) * Time.deltaTime * 2, Space.World); 
+            transform.Rotate(new Vector3(0, 10, 0) * Time.deltaTime * 2, Space.World); 
         }
 
         if (Input.GetKey(KeyCode.A))
         {
             Debug.Log("Left");
-            transform.Rotate(new Vector3(0, -2, 0) * Time.deltaTime * 2, Space.World);
+            transform.Rotate(new Vector3(0, -10, 0) * Time.deltaTime * 2, Space.World);
         }
 
-        if (Input.GetAxis("Vertical") == -1)
-        {
-            shipRB.AddForce(-transform.forward * speed);
-        }
+    }
 
-        if (Input.GetAxis("Vertical") == 1)
+    void onCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.name == "Terrain")
         {
-            shipRB.AddForce(transform.forward * speed);
-        }
-
-        if (Input.GetAxis("Horizontal") == -1)
-        {
-            transform.Rotate(new Vector3(0, 2, 0) * Time.deltaTime * 2, Space.World);
-        }
-
-        if (Input.GetAxis("Horizontal") == 1)
-        {
-            transform.Rotate(new Vector3(0, -2, 0) * Time.deltaTime * 2, Space.World);
+            currentSpeed = 0;
         }
     }
 }
