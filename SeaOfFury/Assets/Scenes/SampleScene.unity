@@ -228,6 +228,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &88500001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88499993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ac1187bb6aa04f9da2201cc9240b3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  friction: 0
+  lerpSpeed: 0
 --- !u!1 &220073235
 GameObject:
   m_ObjectHideFlags: 0
@@ -1240,7 +1255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ad5c6b6833864175b924b2a5bb4a84b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 10
 --- !u!195 &1452324642
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1339,10 +1354,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1712765184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0ad5c6b6833864175b924b2a5bb4a84b, type: 3}
+  m_Script: {fileID: 11500000, guid: 092885605d4f0495fbe7ff06e17208f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookRadius: 15
+  lookRadius: 10
 --- !u!54 &1712765188
 Rigidbody:
   m_ObjectHideFlags: 0

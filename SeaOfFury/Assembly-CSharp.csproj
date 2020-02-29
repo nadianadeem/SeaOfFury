@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\boatMovement.cs" />
      <Compile Include="Assets\Scripts\cannonShooter.cs" />
      <Compile Include="Assets\Scripts\constant.cs" />
+     <Compile Include="Assets\Scripts\merchantShip.cs" />
      <Compile Include="Assets\Scripts\navMeshUpdater.cs" />
      <Compile Include="Assets\Scripts\playerManager.cs" />
      <Compile Include="Assets\Scripts\updatePlane.cs" />
