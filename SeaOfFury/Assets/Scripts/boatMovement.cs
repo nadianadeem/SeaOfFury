@@ -12,10 +12,16 @@ public class boatMovement : MonoBehaviour
     public Animator animationController;
     public Rigidbody shipRB;
 
+    public Camera mainCamera;
+    public Camera leftCamera;
+    public Camera rightCamera;
     // Start is called before the first frame update
     void Start()
     {
         shipRB = GetComponent<Rigidbody>();
+        mainCamera.enabled = true;
+        leftCamera.enabled = false;
+        rightCamera.enabled = false;
     }
 
     // Update is called once per frame
@@ -61,6 +67,26 @@ public class boatMovement : MonoBehaviour
             animationController.SetBool("leftAniTrigger", false);
         }
 
+        if (Input.GetKey(KeyCode.E))
+        {
+            leftCamera.enabled = true;
+            rightCamera.enabled = false;
+            mainCamera.enabled = false;
+        }
+
+        if (Input.GetKey(KeyCode.R))
+        {
+            rightCamera.enabled = false;
+            mainCamera.enabled = true;
+            leftCamera.enabled = false;
+        }
+
+        if (Input.GetKey(KeyCode.T))
+        {
+            rightCamera.enabled = true;
+            mainCamera.enabled = false;
+            leftCamera.enabled = false;
+        }
     }
 
     void onCollisionEnter(Collision collision)
