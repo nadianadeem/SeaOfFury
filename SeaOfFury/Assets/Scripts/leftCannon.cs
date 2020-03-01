@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class cannonShooter : MonoBehaviour
+public class leftCannon : MonoBehaviour
 {
     public int speed;
     public float friction;
@@ -11,13 +11,12 @@ public class cannonShooter : MonoBehaviour
     float yDegrees;
     Quaternion fromRotation;
     Quaternion toRotation;
-    public Camera rightCam;
+    public Camera leftCam;
 
     public GameObject cannonBall;
     private Rigidbody cannonBallRB;
     public Transform shotPosition;
-    public float shotPower;
-    public int powerMult;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +24,7 @@ public class cannonShooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(rightCam.enabled == true)
+        if(leftCam.enabled == true)
         {
             if(Input.GetMouseButton(0))
             {
@@ -47,6 +46,6 @@ public class cannonShooter : MonoBehaviour
         shotPosition.rotation = transform.rotation;
         GameObject cannonBallCopy = Instantiate(cannonBall, shotPosition.position, transform.rotation) as GameObject;
         cannonBallRB = cannonBallCopy.GetComponent<Rigidbody>();
-        cannonBallRB.AddForce(transform.right * 150);
+        cannonBallRB.AddForce(-transform.right * -150);
     }
 }
