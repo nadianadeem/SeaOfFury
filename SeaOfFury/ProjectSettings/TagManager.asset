@@ -8,6 +8,7 @@ TagManager:
   - Cannon
   - attacker
   - ball
+  - sea
   layers:
   - Default
   - TransparentFX

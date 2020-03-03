@@ -17,6 +17,9 @@ public class leftCannon : MonoBehaviour
     private Rigidbody cannonBallRB;
     public Transform shotPosition;
 
+    public float fireRate = 3.0f;
+    public float nextRate = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -36,7 +39,8 @@ public class leftCannon : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Q)){
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate){
+            nextRate = nextRate + fireRate;
             shootCannon();
         }
     }
@@ -46,6 +50,6 @@ public class leftCannon : MonoBehaviour
         shotPosition.rotation = transform.rotation;
         GameObject cannonBallCopy = Instantiate(cannonBall, shotPosition.position, transform.rotation) as GameObject;
         cannonBallRB = cannonBallCopy.GetComponent<Rigidbody>();
-        cannonBallRB.AddForce(-transform.right * -150);
+        cannonBallRB.AddForce(-transform.right * -200);
     }
 }
