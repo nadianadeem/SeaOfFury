@@ -4,10 +4,7 @@ using UnityEngine;
 
 public class boatMovement : MonoBehaviour
 {
-    public float currentSpeed = 0;
-    public float maxSpeed = 0.08f;
-    public float acceleration = 0.02f;
-    public float deceleration = 0.01f;
+    public float[] speeds = new float[4] {0.0f, 0.06f, 0.02f, 0.01f};
 
     public Animator animationController;
     public Rigidbody shipRB;
@@ -15,6 +12,7 @@ public class boatMovement : MonoBehaviour
     public Camera mainCamera;
     public Camera leftCamera;
     public Camera rightCamera;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -29,37 +27,37 @@ public class boatMovement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.W))
         {
-            currentSpeed = currentSpeed + (acceleration * Time.deltaTime);
+            speeds[0] = speeds[0] + (speeds[2] * Time.deltaTime);
         }
         else
         {
-            currentSpeed = currentSpeed - (deceleration * Time.deltaTime);
+            speeds[0] = speeds[0] - (speeds[3] * Time.deltaTime);
         }
         
-        if (currentSpeed > 0)
+        if (speeds[0] > 0)
         {
-            transform.Translate(0, 0, currentSpeed);
+            transform.Translate(0, 0, speeds[0]);
         }
-        if (currentSpeed > maxSpeed){
-            currentSpeed = maxSpeed;
+        if (speeds[0] > speeds[1]){
+            speeds[0] = speeds[1];
         }
 
-        if (currentSpeed < 0)
+        if (speeds[0] < 0)
         {
-            currentSpeed = 0;
+            speeds[0] = 0;
         }
 
         if (Input.GetKey(KeyCode.D))
         {
             animationController.SetBool("rightAniTrigger", true);
             Debug.Log("Right");
-            transform.Rotate(new Vector3(0, 10, 0) * Time.deltaTime * 2, Space.World); 
+            transform.Rotate(new Vector3(0, 15, 0) * Time.deltaTime * 2, Space.World); 
         }
         else if(Input.GetKey(KeyCode.A))
         {
             animationController.SetBool("leftAniTrigger", true);
             Debug.Log("Left");
-            transform.Rotate(new Vector3(0, -10, 0) * Time.deltaTime * 2, Space.World);
+            transform.Rotate(new Vector3(0, -15, 0) * Time.deltaTime * 2, Space.World);
         }
         else
         {
@@ -86,14 +84,6 @@ public class boatMovement : MonoBehaviour
             rightCamera.enabled = true;
             mainCamera.enabled = false;
             leftCamera.enabled = false;
-        }
-    }
-
-    void onCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.name == "Terrain")
-        {
-            currentSpeed = 0;
         }
     }
 }

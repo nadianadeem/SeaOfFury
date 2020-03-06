@@ -9,6 +9,7 @@ TagManager:
   - attacker
   - ball
   - sea
+  - terrain
   layers:
   - Default
   - TransparentFX

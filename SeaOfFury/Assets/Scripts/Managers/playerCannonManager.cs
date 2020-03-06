@@ -6,6 +6,10 @@ public class playerCannonManager : MonoBehaviour
 {
     public float exitRate = 5.0f;
     public float exitTime = 5.0f;
+    public GameObject enemy;
+    public enemyGameMaster gm;
+    // Start is called before the first frame update
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -16,8 +20,9 @@ public class playerCannonManager : MonoBehaviour
     {
         Debug.Log("shot");
         if(other.gameObject.tag == "attacker"){
+            gm = other.GetComponent<enemyGameMaster>();
             Debug.Log("hit something");
-            Destroy(other.gameObject);
+            gm.attacker.health = gm.attacker.takeHealth(gm.attacker.health, gm.attacker.damage);
         }
     }
 }

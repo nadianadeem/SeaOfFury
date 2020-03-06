@@ -26,7 +26,7 @@ public class merchantShip : MonoBehaviour
         if (distance <= lookRadius)
         {
             Vector3 direction = transform.position - target.position;
-            transform.Translate(direction * 0.1f * Time.deltaTime);
+            transform.Translate(Vector3.back * 0.2f * Time.deltaTime);
         }
     }
 

@@ -60,12 +60,18 @@
      <Compile Include="Assets\Scripts\attackerShip\rightEnemyShooter.cs" />
      <Compile Include="Assets\Scripts\boatMovement.cs" />
      <Compile Include="Assets\Scripts\cannonShooter.cs" />
+     <Compile Include="Assets\Scripts\Classes\attackerClass.cs" />
+     <Compile Include="Assets\Scripts\Classes\playerClass.cs" />
+     <Compile Include="Assets\Scripts\Classes\shipClass.cs" />
      <Compile Include="Assets\Scripts\constant.cs" />
      <Compile Include="Assets\Scripts\leftCannon.cs" />
      <Compile Include="Assets\Scripts\Managers\enemyCannonManager.cs" />
+     <Compile Include="Assets\Scripts\Managers\enemyGameMaster.cs" />
+     <Compile Include="Assets\Scripts\Managers\gameMaster.cs" />
      <Compile Include="Assets\Scripts\Managers\playerCannonManager.cs" />
      <Compile Include="Assets\Scripts\Managers\playerManager.cs" />
      <Compile Include="Assets\Scripts\merchantShip.cs" />
+     <Compile Include="Assets\Scripts\UI\healthBar.cs" />
      <None Include="Assets\Wispy Sky\ReadMe.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/nadianadeem/Documents/GitHub/SeaOfFury/SeaOfFury/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
