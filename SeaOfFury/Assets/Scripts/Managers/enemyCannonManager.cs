@@ -4,12 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class enemyCannonManager : MonoBehaviour
-{
-    public float exitRate = 5.0f;
-    public float exitTime = 5.0f;
-
-    public Slider playerHealth;
-    
+{   
     public GameObject player;
     public gameMaster gm;
 
@@ -30,7 +25,6 @@ public class enemyCannonManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("shot");
         if(other.gameObject.tag == "Player"){
             gm.player.health = gm.player.takeHealth(gm.player.health, enemyGameMaster.attacker.damage);
         }

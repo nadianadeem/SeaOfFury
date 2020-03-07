@@ -50,13 +50,11 @@ public class boatMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.D))
         {
             animationController.SetBool("rightAniTrigger", true);
-            Debug.Log("Right");
             transform.Rotate(new Vector3(0, 15, 0) * Time.deltaTime * 2, Space.World); 
         }
         else if(Input.GetKey(KeyCode.A))
         {
             animationController.SetBool("leftAniTrigger", true);
-            Debug.Log("Left");
             transform.Rotate(new Vector3(0, -15, 0) * Time.deltaTime * 2, Space.World);
         }
         else

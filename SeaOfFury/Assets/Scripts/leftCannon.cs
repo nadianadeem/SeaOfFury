@@ -14,6 +14,7 @@ public class leftCannon : MonoBehaviour
     public Camera leftCam;
 
     public GameObject cannonBall;
+    public GameObject explosion;
     private Rigidbody cannonBallRB;
     public Transform shotPosition;
 
@@ -48,6 +49,7 @@ public class leftCannon : MonoBehaviour
     void shootCannon()
     {
         shotPosition.rotation = transform.rotation;
+        Instantiate(explosion, shotPosition.position, shotPosition.rotation);
         GameObject cannonBallCopy = Instantiate(cannonBall, shotPosition.position, transform.rotation) as GameObject;
         cannonBallRB = cannonBallCopy.GetComponent<Rigidbody>();
         cannonBallRB.AddForce(-transform.right * -200);

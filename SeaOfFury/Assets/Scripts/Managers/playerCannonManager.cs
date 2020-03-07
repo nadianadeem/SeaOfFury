@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class playerCannonManager : MonoBehaviour
 {
-    public float exitRate = 5.0f;
-    public float exitTime = 5.0f;
+
+    public GameObject player;
+    public gameMaster gameMaster;
     public GameObject enemy;
     public enemyGameMaster gm;
     // Start is called before the first frame update
@@ -14,6 +15,8 @@ public class playerCannonManager : MonoBehaviour
     void Start()
     {
         Destroy(gameObject, 2.0f);
+        player = GameObject.FindGameObjectWithTag("Player");
+        gameMaster = player.GetComponent<gameMaster>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -21,7 +24,7 @@ public class playerCannonManager : MonoBehaviour
         Debug.Log("shot");
         if(other.gameObject.tag == "attacker"){
             gm = other.GetComponent<enemyGameMaster>();
-            Debug.Log("hit something");
+            gameMaster.score += 100;
             gm.attacker.health = gm.attacker.takeHealth(gm.attacker.health, gm.attacker.damage);
         }
     }
