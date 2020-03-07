@@ -8,6 +8,8 @@ public class gameMaster : MonoBehaviour
     public GameObject gameOverText;
     public GameObject winningText;
 
+    public GameObject map;
+
     public healthBar playerHealth;
 
     public playerClass player;
@@ -22,6 +24,8 @@ public class gameMaster : MonoBehaviour
         playerHealth.SetMaxHealth(player.health);
         gameOverText.SetActive(false);
         winningText.SetActive(false);
+        map.SetActive(false);
+        Time.timeScale = 1;
     }
 
     // Update is called once per frame
@@ -31,9 +35,11 @@ public class gameMaster : MonoBehaviour
         playerHealth.SetHealth(player.health);
         if (player.health <= 0){
             gameOverText.SetActive(true);
+            map.SetActive(true);
         }
         if (score == 1000){
             winningText.SetActive(true);
+            map.SetActive(true);
         }
         
     }
