@@ -71,7 +71,6 @@
      <Compile Include="Assets\Scripts\Classes\attackerClass.cs" />
      <Compile Include="Assets\Scripts\Classes\playerClass.cs" />
      <Compile Include="Assets\Scripts\Classes\shipClass.cs" />
-     <Compile Include="Assets\Scripts\constant.cs" />
      <Compile Include="Assets\Scripts\leftCannon.cs" />
      <Compile Include="Assets\Scripts\Managers\enemyCannonManager.cs" />
      <Compile Include="Assets\Scripts\Managers\enemyGameMaster.cs" />

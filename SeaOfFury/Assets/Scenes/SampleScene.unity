@@ -196,7 +196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 88499994}
 --- !u!65 &88499999
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -525,8 +524,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 329776533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.3, y: 3.04, z: 40.2}
-  m_LocalScale: {x: 7, y: 7, z: 7}
+  m_LocalPosition: {x: 31.3, y: 3, z: 40.2}
+  m_LocalScale: {x: 7, y: 1, z: 7}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -660,7 +659,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 336612956}
 --- !u!195 &336612952
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -1624,7 +1622,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 772484144}
 --- !u!65 &772484143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2930,7 +2927,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 1452324640}
 --- !u!65 &1452324644
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3215,7 +3211,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 1532017624}
 --- !u!195 &1532017620
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8193,7 +8188,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58a17d978fef84119a9d62b8709bdf7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shipRB: {fileID: 1712765188}
 --- !u!195 &1712765186
 NavMeshAgent:
   m_ObjectHideFlags: 0
