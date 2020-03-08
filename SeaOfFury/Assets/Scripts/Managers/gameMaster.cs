@@ -7,8 +7,12 @@ public class gameMaster : MonoBehaviour
 {
     public GameObject gameOverText;
     public GameObject winningText;
+    public GameObject rain;
+
 
     public GameObject map;
+
+    public boatMovement bm;
 
     public healthBar playerHealth;
 
@@ -16,6 +20,17 @@ public class gameMaster : MonoBehaviour
     public int score = 0;
     public Text Score;
 
+    void startRaining(){
+        rain.SetActive(true);
+        bm.speeds[1] = 0.08f;
+        bm.speeds[3] = 0.005f;
+    }
+
+    void stopRaining(){
+        rain.SetActive(false);
+        bm.speeds[1] = 0.06f;
+        bm.speeds[3] = 0.01f;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +40,10 @@ public class gameMaster : MonoBehaviour
         gameOverText.SetActive(false);
         winningText.SetActive(false);
         map.SetActive(false);
+        rain.SetActive(false);
         Time.timeScale = 1;
+        InvokeRepeating("startRaining", 60, 121);
+        InvokeRepeating("stopRaining", 120, 60);
     }
 
     // Update is called once per frame
