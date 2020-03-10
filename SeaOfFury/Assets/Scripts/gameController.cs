@@ -25,7 +25,7 @@ public class gameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetAxis("Vertical") > 0)
+        if (Input.GetAxis("Vertical") < 0)
         {
             speeds[0] = speeds[0] + (speeds[2] * Time.deltaTime);
         }

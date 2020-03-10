@@ -38,9 +38,20 @@ public class leftCannon : MonoBehaviour
                 toRotation = Quaternion.Euler(0, yDegrees, 0);
                 transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * lerpSpeed);
             }
+            xDegrees -= Input.GetAxis("cannonCamX") * speed * friction;
+            yDegrees -= Input.GetAxis("cannonCamY") * speed * friction;
+            fromRotation = transform.rotation;
+            toRotation = Quaternion.Euler(0, yDegrees, 0);
+            transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * lerpSpeed);
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate){
+            nextRate = nextRate + fireRate;
+            shootCannon();
+        }
+
+        if (Input.GetButtonDown("shoot") && Time.time > nextRate)
+        {
             nextRate = nextRate + fireRate;
             shootCannon();
         }

@@ -47,9 +47,21 @@ public class cannonShooter : MonoBehaviour
                 toRotation = Quaternion.Euler(0, CannonInfo.yDegrees, 0);
                 transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
             }
+
+            CannonInfo.xDegrees -= Input.GetAxis("cannonCamX") * CannonInfo.speed * CannonInfo.friction;
+            CannonInfo.yDegrees -= Input.GetAxis("cannonCamY") * CannonInfo.speed * CannonInfo.friction;
+            fromRotation = transform.rotation;
+            toRotation = Quaternion.Euler(0, CannonInfo.yDegrees, 0);
+            transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate){
+            nextRate = nextRate + fireRate;
+            shootCannon();
+        }
+
+        if (Input.GetButtonDown("shoot") && Time.time > nextRate)
+        {
             nextRate = nextRate + fireRate;
             shootCannon();
         }

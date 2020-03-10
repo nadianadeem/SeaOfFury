@@ -34,7 +34,7 @@ InputManager:
     sensitivity: 3
     snap: 1
     invert: 0
-    type: 0
+    type: 2
     axis: 1
     joyNum: 1
   - serializedVersion: 3
@@ -42,7 +42,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: joystick button 2
     altNegativeButton: 
     altPositiveButton: mouse 0
     gravity: 1000
@@ -51,14 +51,14 @@ InputManager:
     snap: 0
     invert: 0
     type: 0
-    axis: 0
+    axis: 1
     joyNum: 0
   - serializedVersion: 3
     m_Name: rightCannonCam
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left alt
+    positiveButton: joystick button 1
     altNegativeButton: 
     altPositiveButton: mouse 1
     gravity: 1000
@@ -70,11 +70,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: FrontCannonCam
+    m_Name: frontCannonCam
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left shift
+    positiveButton: joystick button 3
     altNegativeButton: 
     altPositiveButton: mouse 2
     gravity: 1000
@@ -90,7 +90,7 @@ InputManager:
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: space
+    positiveButton: joystick button 0
     altNegativeButton: 
     altPositiveButton: 
     gravity: 1000
@@ -134,7 +134,7 @@ InputManager:
     axis: 1
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Mouse ScrollWheel
+    m_Name: cannonCamX
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -145,12 +145,12 @@ InputManager:
     dead: 0
     sensitivity: 0.1
     snap: 0
-    invert: 0
-    type: 1
-    axis: 2
-    joyNum: 0
+    invert: 1
+    type: 2
+    axis: 4
+    joyNum: 1
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: cannonCamY
     descriptiveName: 
     descriptiveNegativeName: 
     negativeButton: 
@@ -161,10 +161,10 @@ InputManager:
     dead: 0.19
     sensitivity: 1
     snap: 0
-    invert: 0
+    invert: 1
     type: 2
-    axis: 0
-    joyNum: 0
+    axis: 3
+    joyNum: 1
   - serializedVersion: 3
     m_Name: Vertical
     descriptiveName: 
