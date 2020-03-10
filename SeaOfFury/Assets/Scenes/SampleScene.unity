@@ -184,6 +184,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 88499993}
+--- !u!114 &88499998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88499993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700d8741fa9db4d5487819ca1a393703, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speeds:
+  - 0
+  - 0.06
+  - 0.02
+  - 0.01
+  animationController: {fileID: 88500000}
+  shipRB: {fileID: 88499994}
+  mainCamera: {fileID: 1993745399}
+  leftCamera: {fileID: 282747906}
+  rightCamera: {fileID: 901053574}
 --- !u!65 &88499999
 BoxCollider:
   m_ObjectHideFlags: 0
