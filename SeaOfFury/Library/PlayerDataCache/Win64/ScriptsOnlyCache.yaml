@@ -8,6 +8,7 @@ ScriptsOnlyBuild:
     - boatMovement
     - cannonShooter
     - constant
+    - controllerCamSwitcher
     - enemyCannonManager
     - enemyGameMaster
     - explosionDestroyer
@@ -24,6 +25,14 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineEditorResources
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
@@ -92,43 +101,45 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9582}
     - Class: 114
-      Script: {instanceID: 9738}
+      Script: {instanceID: 9602}
     - Class: 114
-      Script: {instanceID: 9744}
+      Script: {instanceID: 9740}
     - Class: 114
-      Script: {instanceID: 9750}
+      Script: {instanceID: 9746}
     - Class: 114
-      Script: {instanceID: 9758}
+      Script: {instanceID: 9752}
     - Class: 114
-      Script: {instanceID: 9780}
+      Script: {instanceID: 9760}
     - Class: 114
-      Script: {instanceID: 9792}
+      Script: {instanceID: 9782}
     - Class: 114
       Script: {instanceID: 9794}
     - Class: 114
       Script: {instanceID: 9796}
     - Class: 114
-      Script: {instanceID: 10194}
+      Script: {instanceID: 9798}
     - Class: 114
-      Script: {instanceID: 10444}
+      Script: {instanceID: 10196}
     - Class: 114
-      Script: {instanceID: 10470}
+      Script: {instanceID: 10446}
     - Class: 114
-      Script: {instanceID: 10492}
+      Script: {instanceID: 10472}
     - Class: 114
-      Script: {instanceID: 10652}
+      Script: {instanceID: 10494}
     - Class: 114
       Script: {instanceID: 10654}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 10656}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11154}
     - Class: 114
-      Script: {instanceID: 11780}
+      Script: {instanceID: 11350}
     - Class: 114
-      Script: {instanceID: 11874}
+      Script: {instanceID: 11782}
     - Class: 114
-      Script: {instanceID: 18118}
+      Script: {instanceID: 11876}
+    - Class: 114
+      Script: {instanceID: 59104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -312,6 +323,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
     className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: 6f94969cae1a3c7c0938a6a2bffe0b20
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: gameController
   - hash:
       serializedVersion: 2
       Hash: f00ca901b734f71f99db8f25241154c4
@@ -1616,11 +1633,11 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 6f94969cae1a3c7c0938a6a2bffe0b20
+      Hash: 9311e86f093f82ba045ae34c57b7dce5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: gameController
+    className: controllerCamSwitcher
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: /Volumes/NADIA'S USB/buildV1/SeaOfFury.exe
+  playerPath: C:/Users/Nadia/Documents/SeaOfFury - Build/SeaOfFury.exe

@@ -23,7 +23,7 @@ public class gameController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if (Input.GetAxis("Vertical") < 0)
         {
@@ -63,25 +63,5 @@ public class gameController : MonoBehaviour
             animationController.SetBool("leftAniTrigger", false);
         }
 
-        if (Input.GetButtonDown("leftCannonCam"))
-        {
-            leftCamera.enabled = true;
-            rightCamera.enabled = false;
-            mainCamera.enabled = false;
-        }
-
-        if (Input.GetButtonDown("frontCannonCam"))
-        {
-            rightCamera.enabled = false;
-            mainCamera.enabled = true;
-            leftCamera.enabled = false;
-        }
-
-        if (Input.GetButtonDown("rightCannonCam"))
-        {
-            rightCamera.enabled = true;
-            mainCamera.enabled = false;
-            leftCamera.enabled = false;
-        }
     }
 }

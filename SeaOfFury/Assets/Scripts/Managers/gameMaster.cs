@@ -35,6 +35,7 @@ public class gameMaster : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Screen.SetResolution(1080, 720, true);
         player = new playerClass();
         playerHealth.SetMaxHealth(player.health);
         gameOverText.SetActive(false);

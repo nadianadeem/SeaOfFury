@@ -26,7 +26,7 @@ public class leftCannon : MonoBehaviour
     {
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(leftCam.enabled == true)
         {
@@ -45,7 +45,12 @@ public class leftCannon : MonoBehaviour
             transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * lerpSpeed);
         }
 
-        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate){
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate)
+        {
             nextRate = nextRate + fireRate;
             shootCannon();
         }

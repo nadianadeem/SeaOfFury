@@ -35,7 +35,7 @@ public class cannonShooter : MonoBehaviour
         CannonInfo.lerpSpeed = 3;
     }
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(rightCam.enabled == true)
         {
@@ -54,8 +54,12 @@ public class cannonShooter : MonoBehaviour
             toRotation = Quaternion.Euler(0, CannonInfo.yDegrees, 0);
             transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
         }
+    }
 
-        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate){
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate)
+        {
             nextRate = nextRate + fireRate;
             shootCannon();
         }
@@ -65,7 +69,6 @@ public class cannonShooter : MonoBehaviour
             nextRate = nextRate + fireRate;
             shootCannon();
         }
-
     }
 
     void shootCannon()
