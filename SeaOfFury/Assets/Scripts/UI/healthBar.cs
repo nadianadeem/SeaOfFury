@@ -8,7 +8,7 @@ public class healthBar : MonoBehaviour
     //Stores the slider of the health bar.
     public Slider slider;
 
-    //Thisthod set max health changes the max value of the slider to the parameter.
+    //This method sets the changes the max value of the slider to the parameter.
     //the value of the slider is also set to the parameter so the slider is full.
     public void SetMaxHealth(int health){
         slider.maxValue = health;

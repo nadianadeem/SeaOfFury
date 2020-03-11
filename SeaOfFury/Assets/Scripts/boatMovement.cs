@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class boatMovement : MonoBehaviour
 {
-    //An array is created to hold the current speed, maximum speed, acceleration and decleration.
+    //An array is created to hold the current speed, maximum speed, acceleration and deceleration.
     public float[] speeds = new float[4] {0.0f, 0.06f, 0.02f, 0.01f};
 
     //The animator for the player ship is stored in the script.
     //this is to switch between the animations of the sails moving.
     public Animator animationController;
-    //the rigidbody of the player is stored in the script so the player can move.
+    //The rigidbody of the player is stored in the script so the player can move.
     public Rigidbody shipRB;
 
     //All the cameras are stored in the script so the user can switch
@@ -19,7 +19,7 @@ public class boatMovement : MonoBehaviour
     public Camera leftCamera;
     public Camera rightCamera;
 
-    // Start is called before the first frame update
+    // Start is called before the first frame update.
     void Start()
     {
         //The rgidbody of the object the script is on is stored in shipRB.

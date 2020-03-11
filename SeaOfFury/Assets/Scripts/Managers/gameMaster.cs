@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class gameMaster : MonoBehaviour
 {
-    //The ending UI text for the game
+    //The ending UI text for the game (is below).
     //One of these are shown once the player either dies or destroys all boats.
     public GameObject gameOverText;
     public GameObject winningText;
@@ -37,7 +37,7 @@ public class gameMaster : MonoBehaviour
     //the player visually knows that their is a storm.
     void startRaining(){
         rain.SetActive(true);
-        //When it rains the player speeds up and the declaration is decreased.
+        //When it rains the player speeds up and the deceleration is decreased.
         //This is to give the player the feeling of losing control of the boat due to the storm.
         bm.speeds[1] = 0.08f;
         bm.speeds[3] = 0.005f;
@@ -85,7 +85,7 @@ public class gameMaster : MonoBehaviour
         playerHealth.SetHealth(player.health);
         
         //If the player's health is less than 1, the game over text with the background will be shown.
-        the game over text and map are shown.
+        //the game over text and map are shown.
         if (player.health <= 0){
             gameOverText.SetActive(true);
             map.SetActive(true);

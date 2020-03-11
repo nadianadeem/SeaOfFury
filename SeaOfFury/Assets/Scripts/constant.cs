@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class constant : MonoBehaviour
 {
+    //A public rigidbody is created to add force to it.
     public Rigidbody rb;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
     {
+        //constantly adds force down on the ships is make sure it's on the plane.
         rb.AddForce(0,1,0);
     }
 }

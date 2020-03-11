@@ -11,7 +11,7 @@ public class enemyCannonManager : MonoBehaviour
     public GameObject enemy;
     public enemyGameMaster enemyGameMaster;
     
-    //Just before the object is instantiated, both the enemy and player with teir respective game master scripts
+    //Just before the object is instantiated, both the enemy and player with their respective game master scripts
     //are set as the variables declared above.
     void Awake(){
         enemy = GameObject.FindGameObjectWithTag("attacker");
