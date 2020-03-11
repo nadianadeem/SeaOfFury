@@ -78,13 +78,20 @@ public class gameMaster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //The UI 
+        //The UI text is updated with the integer value score.
         Score.text = "Score " + score;
+        //The health bar is updated to value corresponding to the player's health,
+        //this will be visually shown as the health bar decreasing in size.
         playerHealth.SetHealth(player.health);
+        
+        //If the player's health is less than 1, the game over text with the background will be shown.
+        the game over text and map are shown.
         if (player.health <= 0){
             gameOverText.SetActive(true);
             map.SetActive(true);
         }
+        //If the player's score is 1000 this means that the player has destoryed all the ships and have
+        //won the game so the victory text and background will be shown.
         if (score == 1000){
             winningText.SetActive(true);
             map.SetActive(true);
@@ -92,6 +99,8 @@ public class gameMaster : MonoBehaviour
         
     }
 
+    //If the player collides with the terrain the ship loses 25 health and is moved back so it
+    //an infinite loop is not caused.
     void OnCollisionEnter(Collision other){
         if (other.gameObject.tag == "terrain"){
             player.health = player.takeHealth(player.health, 25);
