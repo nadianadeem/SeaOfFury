@@ -26,7 +26,8 @@ public class enemyCannonManager : MonoBehaviour
         Destroy(gameObject, 5.0f);
     }
 
-    //When the enemy's cannon ball hits the player the health variable in the player's game master script has the damage
+    //When the enemy's cannon ball hits the player the health variable
+    //in the player's game master script has the damage
     //stored in the game master script taken away from it.
     void OnTriggerEnter(Collider other)
     {
