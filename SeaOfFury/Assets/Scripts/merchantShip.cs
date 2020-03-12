@@ -35,7 +35,7 @@ public class merchantShip : MonoBehaviour
         {
             //Get the direction that the enemy ship must move to.
             Vector3 direction = transform.position - target.position;
-            //Move towards the player ship.
+            //Move away from the player ship.
             transform.Translate(Vector3.back * 0.2f * Time.deltaTime);
         }
     }
