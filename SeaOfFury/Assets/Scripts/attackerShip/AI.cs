@@ -33,7 +33,7 @@ public class AI : MonoBehaviour
             Vector3 direction = transform.position + target.position;
             //The enemy ship will then face toward the player ship.
             transform.LookAt(target);
-            //The enemy ships is then moved towards the player ship.
+            //The enmy ships is then moved towards the player ship.
             transform.Translate(direction * 0.01f * Time.deltaTime);
         }
         
