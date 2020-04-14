@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class gameMaster : MonoBehaviour
 {
+    public Light light;
     //The ending UI text for the game (is below).
     //One of these are shown once the player either dies or destroys all boats.
     public GameObject gameOverText;
@@ -36,20 +37,22 @@ public class gameMaster : MonoBehaviour
     //This method switches the rain particle system to active so
     //the player visually knows that their is a storm.
     void startRaining(){
+        light.intensity = 0.1f;
         rain.SetActive(true);
         //When it rains the player speeds up and the deceleration is decreased.
         //This is to give the player the feeling of losing control of the boat due to the storm.
-        bm.speeds[1] = 0.08f;
-        bm.speeds[3] = 0.005f;
+        bm.speeds[1] = 0.8f;
+        bm.speeds[3] = 0.05f;
     }
 
     //This method switches the rain particle system to inactive
     //so the player can no longer see it.
     void stopRaining(){
+        light.intensity = 0.7f;
         rain.SetActive(false);
         //Once the rain has stopped the players values are reset back to the default values.
-        bm.speeds[1] = 0.06f;
-        bm.speeds[3] = 0.01f;
+        bm.speeds[1] = 0.6f;
+        bm.speeds[3] = 0.1f;
     }
 
     // Start is called before the first frame update

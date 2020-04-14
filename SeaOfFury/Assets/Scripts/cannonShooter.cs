@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class cannonShooter : MonoBehaviour
 {
+    public AudioSource cannonSound;
     //A struct is created to hold all the values needed to rotate the cannon.
     public struct cannonInfo{
         public int speed;
@@ -85,12 +86,14 @@ public class cannonShooter : MonoBehaviour
         //and shoot the cannon.
         if (Input.GetKeyDown(KeyCode.Q) && Time.time > nextRate)
         {
+            cannonSound.Play();
             nextRate = nextRate + fireRate;
             shootCannon();
         }
 
         if (Input.GetButtonDown("shoot") && Time.time > nextRate)
         {
+            cannonSound.Play();
             nextRate = nextRate + fireRate;
             shootCannon();
         }

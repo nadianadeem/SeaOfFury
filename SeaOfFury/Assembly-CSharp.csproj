@@ -91,6 +91,8 @@
     <Compile Include="Assets\Scripts\Managers\playerManager.cs" />
     <Compile Include="Assets\Scripts\Managers\playerShotChecker.cs" />
     <Compile Include="Assets\Scripts\merchantShip.cs" />
+    <Compile Include="Assets\Scripts\patrol\enemyPatrol.cs" />
+    <Compile Include="Assets\Scripts\patrol\waypoint.cs" />
     <Compile Include="Assets\Scripts\UI\healthBar.cs" />
     <None Include="Assets\Wispy Sky\ReadMe.txt" />
     <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />

@@ -11,6 +11,7 @@ ScriptsOnlyBuild:
     - controllerCamSwitcher
     - enemyCannonManager
     - enemyGameMaster
+    - enemyPatrol
     - explosionDestroyer
     - gameController
     - gameMaster
@@ -21,6 +22,7 @@ ScriptsOnlyBuild:
     - playerManager
     - playerShotChecker
     - rightEnemyShooter
+    - waypoint
     Unity.RenderPipelines.Lightweight.Runtime.dll:
     - UnityEngine.Rendering.LWRP.ForwardRendererData
     - UnityEngine.Rendering.LWRP.LightweightRenderPipelineAsset
@@ -28,10 +30,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -74,9 +74,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 84
       Script: {instanceID: 0}
     - Class: 89
+      Script: {instanceID: 0}
+    - Class: 90
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -119,27 +125,31 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9798}
     - Class: 114
-      Script: {instanceID: 10196}
+      Script: {instanceID: 10162}
     - Class: 114
-      Script: {instanceID: 10446}
+      Script: {instanceID: 10198}
     - Class: 114
-      Script: {instanceID: 10472}
+      Script: {instanceID: 10448}
     - Class: 114
-      Script: {instanceID: 10494}
+      Script: {instanceID: 10474}
     - Class: 114
-      Script: {instanceID: 10654}
+      Script: {instanceID: 10496}
     - Class: 114
       Script: {instanceID: 10656}
     - Class: 114
-      Script: {instanceID: 11154}
+      Script: {instanceID: 10658}
     - Class: 114
-      Script: {instanceID: 11350}
+      Script: {instanceID: 11156}
     - Class: 114
-      Script: {instanceID: 11782}
+      Script: {instanceID: 11352}
     - Class: 114
-      Script: {instanceID: 11876}
+      Script: {instanceID: 11784}
     - Class: 114
-      Script: {instanceID: 59104}
+      Script: {instanceID: 11878}
+    - Class: 114
+      Script: {instanceID: 102326}
+    - Class: 114
+      Script: {instanceID: 102338}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -161,6 +171,8 @@ ScriptsOnlyBuild:
     - Class: 198
       Script: {instanceID: 0}
     - Class: 199
+      Script: {instanceID: 0}
+    - Class: 208
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -217,7 +229,7 @@ ScriptsOnlyBuild:
     className: TMP_SelectionCaret
   - hash:
       serializedVersion: 2
-      Hash: e930078a2bea39acdf20531f8a27bb5b
+      Hash: 6b3d1b2abaeef2d4db2576b901256e65
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gameMaster
@@ -277,7 +289,7 @@ ScriptsOnlyBuild:
     className: NavMeshLink
   - hash:
       serializedVersion: 2
-      Hash: 7cf058fb90104fbcdbd38a76fbf148b4
+      Hash: 5e159a6eed7f707614f6e1f29dfb6c3a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: playerShotChecker
@@ -845,6 +857,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 9311e86f093f82ba045ae34c57b7dce5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: controllerCamSwitcher
   - hash:
       serializedVersion: 2
       Hash: 780e8f682b3221346c034a6712a0fd25
@@ -1429,7 +1447,7 @@ ScriptsOnlyBuild:
     className: Mudguard
   - hash:
       serializedVersion: 2
-      Hash: 31588364e20101598fe4456c5b5c7008
+      Hash: 96e48025432868b5ddac3975f19ca3a7
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cannonShooter
@@ -1633,10 +1651,16 @@ ScriptsOnlyBuild:
     className: AutoMobileShaderSwitch
   - hash:
       serializedVersion: 2
-      Hash: 9311e86f093f82ba045ae34c57b7dce5
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: controllerCamSwitcher
+    className: waypoint
+  - hash:
+      serializedVersion: 2
+      Hash: a603449a01fcf6be3d92601439b23cf2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: enemyPatrol
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
