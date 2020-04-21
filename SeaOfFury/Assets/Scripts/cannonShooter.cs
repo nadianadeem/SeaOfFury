@@ -31,6 +31,7 @@ public class cannonShooter : MonoBehaviour
     //The shot position is where the cannon ball is shot from.
     public GameObject cannonBall;
     public GameObject explosion;
+    public GameObject cannon;
     private Rigidbody cannonBallRB;
     public Transform shotPosition;
 
@@ -42,41 +43,54 @@ public class cannonShooter : MonoBehaviour
     void Start()
     {
         //Set the values for the rotation of the cannon.
-        CannonInfo.speed = 5;
+        CannonInfo.speed = 3;
         CannonInfo.friction = 1;
-        CannonInfo.lerpSpeed = 3;
+        CannonInfo.lerpSpeed = 2;
     }
 
     void FixedUpdate()
     {
         //If the player is looking through the right camera...
-        if(rightCam.enabled == true)
+        if (rightCam.enabled == true)
         {
             //And the left mouse button is held down.
-            if(Input.GetMouseButton(0))
+            if (Input.GetMouseButton(0))
             {
-                //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
-                CannonInfo.xDegrees -= Input.GetAxis("Mouse X") * CannonInfo.speed * CannonInfo.friction;
-                CannonInfo.yDegrees -= Input.GetAxis("Mouse Y") * CannonInfo.speed * CannonInfo.friction;
-                //Stores the current rotation of the cannon.
-                fromRotation = transform.rotation;
-                //The 'toRotation' is the angle of the variable 'yDegrees'.
-                toRotation = Quaternion.Euler(0, CannonInfo.xDegrees, 0);
-                //This method moves the cannon using the Lerp method from the starting position 
-                //of the cannon to the desired rotation at the speed defined at the start.
-                transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
-            }
+                if (cannon.transform.eulerAngles.y > 304 || cannon.transform.eulerAngles.y < 10)
+                {
+                    //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
+                    CannonInfo.xDegrees -= Input.GetAxis("Mouse X") * CannonInfo.speed * CannonInfo.friction;
+                    CannonInfo.yDegrees -= Input.GetAxis("Mouse Y") * CannonInfo.speed * CannonInfo.friction;
+                    //Stores the current rotation of the cannon.
+                    fromRotation = transform.rotation;
+                    //The 'toRotation' is the angle of the variable 'yDegrees'.
+                    toRotation = Quaternion.Euler(0, CannonInfo.xDegrees, 0);
+                    //This method moves the cannon using the Lerp method from the starting position 
+                    //of the cannon to the desired rotation at the speed defined at the start.
+                    transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
 
-            //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
-            CannonInfo.xDegrees -= Input.GetAxis("cannonCamX") * CannonInfo.speed * CannonInfo.friction;
-            CannonInfo.yDegrees -= Input.GetAxis("cannonCamY") * CannonInfo.speed * CannonInfo.friction;
-            //Stores the current rotation of the cannon.
-            fromRotation = transform.rotation;
-            //The 'toRotation' is the angle of the variable 'yDegrees'.
-            toRotation = Quaternion.Euler(0, CannonInfo.xDegrees, 0);
-            //This method moves the cannon using the Lerp method from the starting position 
-            //of the cannon to the desired rotation at the speed defined at the start.
-            transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
+                    //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
+                    CannonInfo.xDegrees -= Input.GetAxis("cannonCamX") * CannonInfo.speed * CannonInfo.friction;
+                    CannonInfo.yDegrees -= Input.GetAxis("cannonCamY") * CannonInfo.speed * CannonInfo.friction;
+                    //Stores the current rotation of the cannon.
+                    fromRotation = transform.rotation;
+                    //The 'toRotation' is the angle of the variable 'yDegrees'.
+                    toRotation = Quaternion.Euler(0, CannonInfo.xDegrees, 0);
+                    //This method moves the cannon using the Lerp method from the starting position 
+                    //of the cannon to the desired rotation at the speed defined at the start.
+                    transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * CannonInfo.lerpSpeed);
+                }
+
+            if (cannon.transform.eulerAngles.y < 304 && cannon.transform.eulerAngles.y > 250)
+            {
+                transform.rotation = Quaternion.Euler(0, 306, 0);
+            }
+                
+            if (cannon.transform.eulerAngles.y < 15)
+            {
+                transform.rotation = Quaternion.Euler(0, 7, 0);
+            }
+            }
         }
     }
 

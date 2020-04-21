@@ -18,7 +18,7 @@ public class rightEnemyShooter : MonoBehaviour
     {
         //This method runs the attack method at 2 seconds since the start of the game
         //and then every 5 seconds after.
-        InvokeRepeating("attack", 2.0f, 5.0f);
+        InvokeRepeating("attack", 2.0f, 3.0f);
     }
 
     //The attack methods creates the cannon ball and add force to it.

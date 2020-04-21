@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class AI : MonoBehaviour
 {
+    public enemyPatrol eP;
     //The lookRadius is how far the enemy can detect the player.
     public float lookRadius = 10f;
 
@@ -26,13 +27,19 @@ public class AI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         //The distance between the player and enemy is calculated and is stored in the variable distance.
         float distance = Vector3.Distance(target.position, transform.position);
 
         //If the player is within the radius...
         if (distance <= lookRadius)
         {
+            eP.patrolling = false;
             agent.SetDestination(target.position);
+        }
+        else
+        {
+            eP.patrolling = true;
         }
 
     }
