@@ -37,55 +37,6 @@ public class leftCannon : MonoBehaviour
     {
         transform.rotation = Quaternion.Euler(0, 163, 0);
     }
-
-    void FixedUpdate()
-    {
-        Debug.Log(cannon.transform.eulerAngles.y);
-        //If the player is looking through the left camera...
-        if (leftCam.enabled == true)
-        {
-            //And the left mouse button is held down.
-            if (Input.GetMouseButton(0))
-            {
-                if (cannon.transform.eulerAngles.y > 145 && cannon.transform.eulerAngles.y < 220) {
-                    //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
-                    xDegrees -= Input.GetAxis("Mouse X") * speed * friction;
-                    yDegrees -= Input.GetAxis("Mouse Y") * speed * friction;
-                    //Stores the current rotation of the cannon.
-                    fromRotation = transform.rotation;
-                    //The 'toRotation' is the angle of the variable 'yDegrees'.
-                    toRotation = Quaternion.Euler(0, xDegrees, 0);
-                    //This method moves the cannon using the Lerp method from the starting position 
-                    //of the cannon to the desired rotation at the speed defined at the start.
-                    transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * lerpSpeed);
-
-                    //xDegrees and yDegrees equals the axis of the mouse with the speed and friction multiplied.
-                    xDegrees -= Input.GetAxis("cannonCamX") * speed * friction;
-                    yDegrees -= Input.GetAxis("cannonCamY") * speed * friction;
-                    //Stores the current rotation of the cannon.
-                    fromRotation = transform.rotation;
-                    //The 'toRotation' is the angle of the variable 'yDegrees'.
-                    toRotation = Quaternion.Euler(0, xDegrees, 0);
-                    //This method moves the cannon using the Lerp method from the starting position 
-                    //of the cannon to the desired rotation at the speed defined at the start.
-                    transform.rotation = Quaternion.Lerp(fromRotation, toRotation, Time.deltaTime * lerpSpeed);
-                 }
-
-            if (cannon.transform.eulerAngles.y < 145)
-            {
-                transform.rotation = Quaternion.Euler(0, 147, 0);
-            }
-
-            if (cannon.transform.eulerAngles.y > 216)
-            {
-                transform.rotation = Quaternion.Euler(0, 218, 0);
-            }
-
-            }
-        }
-
-    }
-
     void Update()
     {
         //If the "Q" key or or A button is pressed and is not restricted from the fire rate then added to the fire rate 

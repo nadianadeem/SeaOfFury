@@ -313,7 +313,7 @@ ScriptsOnlyBuild:
     className: FirstPersonController
   - hash:
       serializedVersion: 2
-      Hash: a603449a01fcf6be3d92601439b23cf2
+      Hash: 440f959fcf77b462b500267eb4adc17a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: enemyPatrol
@@ -1003,7 +1003,7 @@ ScriptsOnlyBuild:
     className: playerManager
   - hash:
       serializedVersion: 2
-      Hash: c45dc756a54af7d620fb316dd4544c1a
+      Hash: da6ec2948f0e99cbddbe146025a0101d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: leftCannon
@@ -1093,7 +1093,7 @@ ScriptsOnlyBuild:
     className: boatMovement
   - hash:
       serializedVersion: 2
-      Hash: 770b1115807aaab948646a2b995cbf84
+      Hash: ca837b7bbd9e63babef1621ac28f2355
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: AI
@@ -1453,7 +1453,7 @@ ScriptsOnlyBuild:
     className: Mudguard
   - hash:
       serializedVersion: 2
-      Hash: 96e48025432868b5ddac3975f19ca3a7
+      Hash: e4f547e3a936af780227c8f71b1361b5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: cannonShooter

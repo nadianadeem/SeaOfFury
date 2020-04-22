@@ -62,14 +62,14 @@ public class gameController : MonoBehaviour
 
         //If the joystick is pointed right the boat is rotated 15 Degrees.
         //The sails are rotated right using the animator and it's triggers.
-        if (Input.GetAxis("Horizontal") > 0)
+        if (Input.GetAxis("Horizontal") > 0.5)
         {
             animationController.SetBool("rightAniTrigger", true);
             transform.Rotate(new Vector3(0, 15, 0) * Time.deltaTime * 2, Space.World); 
         }
         //If the joystick is pointed left the boat is rotated -15 Degrees.
         //The sails are rotated left using the animator and it's triggers.
-        else if(Input.GetAxis("Horizontal") < 0)
+        else if(Input.GetAxis("Horizontal") < -0.5)
         {
             animationController.SetBool("leftAniTrigger", true);
             transform.Rotate(new Vector3(0, -15, 0) * Time.deltaTime * 2, Space.World);
