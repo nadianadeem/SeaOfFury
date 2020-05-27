@@ -3,4 +3,4 @@ Sea of Fury was a 3D 17th Century pirate ship game created for the 3D Games Prog
 
 <img src="SeaOfFuryScreenShot.png?raw=true"/>
 
-For more details see [LinkedIn Post] https://www.linkedin.com/posts/nadia-nadeem-a96a34156_gamedev-gamedevelopment-games-ugcPost-6660835080098971648-qMSw. 
+For more details see [LinkedIn Post](https://www.linkedin.com/posts/nadia-nadeem-a96a34156_gamedev-gamedevelopment-games-ugcPost-6660835080098971648-qMSw). 
